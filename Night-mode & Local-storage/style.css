@@ -1,0 +1,41 @@
+/* define dark mode color */
+:root{
+    --dark-background-color:#111111;
+    --dark-background-color-alt:#222222;
+    --dark-text-color:#eeeeee;
+
+}
+
+body{
+    --background-color:#ffffff;
+    --background-color-alt:#eeeeee;
+    --text-color:#333333;
+
+    color: var(--text-color);
+    background:var(--background-color-alt);
+    font-family: sans-serif;   
+}
+
+
+body.tDark{
+    --background-color: var(--dark-background-color);
+    --background-color-alt: var(--dark-background-color-alt);
+    --text-color: var(--dark-text-color);
+}
+
+
+/* identifiying dark mode by the help of system settings */
+@media (prefers-color-scheme:dark) {
+
+    body.tAuto{
+        --background-color: var(--dark-background-color);
+        --background-color-alt: var(--background-color-alt);
+        --text-color: var(--dark-text-color);
+    }
+    
+}
+
+main{
+    padding-left: 300px;
+    padding-right: 300px;
+}
